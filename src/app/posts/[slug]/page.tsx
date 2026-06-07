@@ -39,22 +39,31 @@ export default async function PostPage({
     <article>
       <Link
         href="/"
-        className="text-sm text-black/50 hover:underline dark:text-white/50"
+        className="text-sm text-neon-pink transition-[text-shadow] hover:[text-shadow:0_0_8px_rgba(255,43,214,0.6)]"
       >
-        ← 목록으로
+        ← cd ..
       </Link>
 
-      <header className="mt-6">
-        <time className="text-sm text-black/50 dark:text-white/50">
-          {formatDate(post.date)}
-        </time>
-        <h1 className="mt-1 text-3xl font-bold tracking-tight">{post.title}</h1>
+      <header className="mt-8">
+        <time className="text-sm text-neon-green">{formatDate(post.date)}</time>
+        <h1 className="glow-cyan mt-2 text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
+          {post.title}
+        </h1>
+        <hr className="neon-rule mt-6" />
       </header>
 
       <div
-        className="prose prose-zinc mt-8 max-w-none dark:prose-invert"
+        className="prose prose-invert prose-neon mt-10 max-w-none"
         dangerouslySetInnerHTML={{ __html: post.contentHtml }}
       />
+
+      <hr className="neon-rule mt-12 opacity-60" />
+      <Link
+        href="/"
+        className="mt-6 inline-block text-sm text-neon-purple hover:underline"
+      >
+        ← 목록으로 돌아가기
+      </Link>
     </article>
   );
 }

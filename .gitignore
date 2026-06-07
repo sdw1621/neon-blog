@@ -44,3 +44,8 @@ next-env.d.ts
 /index.html
 /styles.css
 /posts/
+
+# stray dev process logs
+*.log
+/dev-out.log
+/dev-err.log
